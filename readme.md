@@ -11,7 +11,7 @@
 
 2. Make sure to change the **WEBHOOK** key on the .env file to a valid one.
 
-3. Run the project with: **node main.js**
+3. Run the project with: **node ./src/main.js**
 
 
 ## Testing
