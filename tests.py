@@ -43,6 +43,21 @@ def send_invalid_request_body(*args):
     print("{status} - {message}".format(status=r, message=message))
 
 
-for test in [send_valid_request, send_incomplete_request_body, send_invalid_request_body]:
-    test(notification2)
+def send_invalid_request(*args):
+    r = requests.get(url=address)
+
+    print("{status}".format(status=r))
+
+
+def send_invalid_field_type(notification):
+    aux = notification.copy()
+    aux["evt"] = 22
+    aux["owner"] = "test"
+    r = requests.post(url=address, json=aux)
+    message = r.text
+    print("{status} - {message}".format(status=r, message=message))
+
+
+for test in [send_valid_request, send_incomplete_request_body, send_invalid_request_body, send_invalid_request, send_invalid_field_type]:
+    test(notification1)
     time.sleep(1)

@@ -8,8 +8,6 @@ app.use(express.json());
 const port = process.env.PORT;
 
 app.post("/", async (req, res) => {
-    console.log(req.body);
-
     let newNotification, message;
     try {
         newNotification = new NotificationRequest(req.body);
