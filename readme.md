@@ -17,3 +17,9 @@
 ## Testing
 
 - The __tests.py__ have some basic tests to simulate the notification messages and some possible errors.
+
+
+## Question
+
+Which HTTP response code is most suitable for this endpoint in case of a valid payload? Why?
+- A: 200. It could be 201 but since the webhook and the application itself does not allocate any resource(permanent) for the request, 200 is the correct one to tell the user that the request was completed succesfully.
