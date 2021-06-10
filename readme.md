@@ -16,4 +16,4 @@
 
 ## Testing
 
-- The __tests.py__ have some basic tests to 
+- The __tests.py__ have some basic tests to simulate the notification messages and some possible errors.
